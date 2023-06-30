@@ -7,5 +7,4 @@ SELECT
 FROM
     `second_table`
 ORDER BY
-    `score` DES
-LIMIT 10;
+    `score` DES;
