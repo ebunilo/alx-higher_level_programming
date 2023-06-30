@@ -7,4 +7,4 @@ SELECT
 FROM
     `second_table`
 ORDER BY
-    `score` DES;
+    `score` DESC;
