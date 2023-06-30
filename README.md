@@ -1,1 +1,5 @@
-# Higher Level Programming: Python, Javascript, and Databases
+# Higher Level Programming
+
+- Python
+- Javascript
+- Databases
