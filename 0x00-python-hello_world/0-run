@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-# Script to run a python file stored as an environmental variable $PYFILE
-
+#!/usr/bin/bash
 python3 $PYFILE
