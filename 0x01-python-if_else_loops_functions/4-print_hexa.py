@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 """Print all numbers from 0 to 98 in decimal and hexadecimal"""
 for i in range(0, 99):
-    print("{} = {:x}".format(i, i))
+    print("{} = {}".format(i, hex(i)))
