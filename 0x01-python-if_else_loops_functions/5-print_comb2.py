@@ -5,4 +5,4 @@ Numbers should be printed in ascending order, with two digits
 """
 for number in range(0, 99):
     print("{:02d}, ".format(number), end="")
-print("99\n")
+print("99")
