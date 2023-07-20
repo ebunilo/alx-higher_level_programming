@@ -10,17 +10,13 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     operator = sys.argv[2]
 
-    try:
-        len(sys.argv) - 1 != 3
-    except:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+    if len(sys.argv) - 1 != 3:
+        raise Exception("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     operators = {"+": add, "-": sub, "*": mul, "/": div}
-    try:
-        operator in list(operators.keys())
-    except:
-        print("unknown operator. Available operators: +, -, * and /")
+    if operator not in list(operators.keys()):
+        raise Exception("unknown operator. Available operators: +, -, * and /")
         exit(1)
 
     print("{} {} {} = {}".format(a, operator, b, operators[operator](a, b)))
