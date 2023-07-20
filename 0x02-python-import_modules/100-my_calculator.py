@@ -6,27 +6,17 @@ if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
 
-    args = sys.argv
-    args_count = len(args) - 1
-    operators = ["+", "-", "*", "/"]
-    a = int(args[1])
-    b = int(args[3])
-    operator = args[2]
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    operator = sys.argv[2]
 
-    if args_count != 3:
+    if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    if operator not in operators:
+    operators = {"+": add, "-": sub, "*": mul, "/": div}
+    if operator not in list(operators.keys()):
         print("unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    match operator:
-        case "+":
-            print("{} + {} = {}".format(a, b, add(a, b)))
-        case "-":
-            print("{} - {} = {}".format(a, b, sub(a, b)))
-        case "*":
-            print("{} * {} = {}".format(a, b, mul(a, b)))
-        case "/":
-            print("{} / {} = {}".format(a, b, div(a, b)))
+    print("{} {} {} = {}".format(a, operator, b, operators[operator](a, b)))
