@@ -10,7 +10,7 @@ def print_reversed_list_integer(my_list=[]):
     Returns:
         None
     """
-    if my_list:
+    if my_list != None:
         my_list.sort(reverse=True)
     for i in range(len(my_list)):
         print("{:d}".format(my_list[i]))
