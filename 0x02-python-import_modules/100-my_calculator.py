@@ -10,12 +10,16 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     operator = sys.argv[2]
 
-    if len(sys.argv) - 1 != 3:
+    try:
+        len(sys.argv) - 1 != 3
+    except:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     operators = {"+": add, "-": sub, "*": mul, "/": div}
-    if operator not in list(operators.keys()):
+    try:
+        operator in list(operators.keys())
+    except:
         print("unknown operator. Available operators: +, -, * and /")
         exit(1)
 
